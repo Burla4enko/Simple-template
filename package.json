@@ -1,0 +1,14 @@
+{
+  "name": "simple-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Burla4enko/Simple-template",
+  "author": "Burla4enko <bur.ap@mail.ru>",
+  "license": "MIT",
+  "devDependencies": {
+    "normalize-scss": "^7.0.1"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}
