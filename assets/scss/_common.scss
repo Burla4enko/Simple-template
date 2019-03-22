@@ -1,0 +1,40 @@
+*{
+  box-sizing: border-box;
+}
+
+html {
+  font-family: verdana, arial, sans-serif;
+  font-size: 12px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: url(../img/background.jpg);
+  background-color: #3a3a3a;
+  align-items: center;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+p {
+  line-height: 1.75;
+  color: $base-color;
+}
+
+.wrapper {
+  max-width: $large;
+  padding: 0 $gutter;
+  flex-grow: 1;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  padding: $gutter;
+  background-color: rgba(#ffffff, 0.1);
+}

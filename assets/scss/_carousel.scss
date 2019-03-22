@@ -1,0 +1,115 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  padding: $gutter;
+  background-color: $light-color;
+  order: 1;
+
+  &-slides {
+    position: relative;
+  }
+}
+
+.carousel-slide {
+  display: flex;
+  position: relative;
+  // position: absolute;
+  top: 0;
+  border: 7px solid #ffffff;    
+  background-image: url(../img/carousel-item-bg.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  transition: opacity 0.5s;
+  opacity: 1;
+
+  &.active {
+    position: relative;
+    z-index: 1;
+    opacity: 1;
+  }
+
+  &__image {
+    display: flex;
+    padding: $gutter;
+    align-items: center;
+
+    @media (min-width: $large + 1) {
+      flex: 0 0 250px;
+    }
+
+    @media (max-width: $large) and (min-width: $small + 1) {
+      flex: 0 0 220px;
+    }
+
+    @media (max-width: $small) {
+      flex: 1 0 100%;
+      justify-content: center;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__text {
+    @media (min-width: $small + 1) {
+      padding: $gutter $gutter * 2 $gutter $gutter;
+      flex-grow: 1;
+    }
+
+    @media (max-width: $small) {
+      flex: 1 0 100%;
+      padding: 0 $gutter $gutter $gutter;
+    }
+
+    h3 {
+      text-transform: uppercase;
+      color: #ffffff;
+
+      @media (min-width: $small + 1) {
+        margin: $gutter 0;
+        flex-grow: 1;
+      }
+
+      @media (max-width: $small) {
+        flex: 1 0 100%;
+        overflow: hidden;
+        max-width: calc(100vw - 135px);
+        margin: 0 0 $gutter 0;
+        text-align: center;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #ffffff;
+      max-height: 70px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+      overflow: hidden;
+    }
+  }
+}
+
+.carousel-control {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+
+  &.prev {
+    left: 3px;
+  }
+
+  &.next {
+    right: 3px;
+    transform: scale(-1, 1);
+  }
+
+  img {
+    margin-top: -$gutter;
+  }
+}  
