@@ -22,6 +22,10 @@
   transition: opacity 0.5s;
   opacity: 1;
 
+  @media (max-width: $small) {
+    flex-wrap: wrap;
+  }
+
   &.active {
     position: relative;
     z-index: 1;
@@ -91,6 +95,17 @@
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 4;
       overflow: hidden;
+
+      @media (min-width: $small + 1) {
+        margin-bottom: $gutter;
+        text-align: justify;
+        flex-grow: 1;
+      }
+
+      @media (max-width: $small) {        
+        text-align: center;
+        margin: 0;        
+      }
     }
   }
 }
