@@ -8,11 +8,20 @@ html {
 }
 
 body {
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   background: url(../img/background.jpg);
   background-color: #3a3a3a;
+  background-position: 50% 0;
   align-items: center;
+}
+
+h2 {
+  margin: 10px 0;
+  color: $accent-color;
+  font-size: 2rem;
+  font-weight: normal;
 }
 
 h3 {
@@ -23,6 +32,14 @@ h3 {
 p {
   line-height: 1.75;
   color: $base-color;
+}
+
+li {
+  line-height: 1.5;
+}
+
+i {
+  color: #424242;
 }
 
 .wrapper {

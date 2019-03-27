@@ -1,0 +1,57 @@
+.left-sidebar {
+  position: relative;
+  background-color: $light-color;
+
+  ul {
+    padding-left: $gutter + 5;
+  }
+
+  li {
+    position: relative;
+    list-style: none;
+    padding: $gutter / 2;
+    color: $base-color;
+    font-style: italic;
+
+    &::before {
+      position: absolute;
+      margin-left: -$gutter;
+      content: url(../img/main-list-arrow.png);
+    }
+
+    span {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: #dddddd;
+        height: 1px;
+        right: 0;
+        left: 0;
+        bottom: -10px;
+      }
+    }
+  }
+
+  @media (min-width: $small + 1) {
+    flex: 0 0 $col-size;
+    order: 2;
+    padding: 0 $gutter $gutter $gutter + 5;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 15px;
+      height: 90%;
+      border-right: 1px solid #dddddd;
+    }
+  }
+
+  @media (max-width: $small) {
+    flex: 1 0 100%;
+    order: 3;
+    padding: 0 $gutter + 5 $gutter + 5 $gutter + 5;
+  }
+}
