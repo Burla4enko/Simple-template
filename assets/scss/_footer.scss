@@ -1,0 +1,119 @@
+.footer {
+  display: flex;
+  width: 100%;
+  background-color: rgba(#000000, 0.4);
+  justify-content: center;
+
+  &-left {
+    @media (max-width: $large) and (min-width: $small + 1) {
+        flex: 0 0 60%;
+    }
+
+    @media (max-width: $small) {
+        flex: 1 0 100%;
+    }
+  }
+
+  &-right {
+    @media (max-width: $large) and (min-width: $small + 1) {
+        flex: 0 0 40%;
+    }
+
+    @media (max-width: $small) {
+        flex: 1 0 100%;
+    }
+  }
+
+  &-logo {
+    margin: $gutter;
+
+    @media (min-width: $small + 1) {
+      text-align: right;
+    }
+
+    @media (max-width: $small) {
+      text-align: center;
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    margin-top: 37px;
+  }
+}
+
+.twitter {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__image {
+    flex: 0 0 55px;
+  }
+
+  &__description {
+    flex: 1 0 100px;
+
+    &-title {
+      display: block;
+      font-size: 2rem;
+      color: #ffffff;
+    }
+
+    &-slogan {
+      color: #727272;
+    }
+  }
+
+  &__post {
+    position: relative;
+    flex: 1 0 calc(100% - 67px);
+    padding: $gutter + 5;
+    background-color: rgba(#000000, 0.4);
+    border-radius: 10px;
+
+    &::before {
+      position: absolute;
+      content: url(../img/twitter-speech-bubble.png);
+      left: 0;
+      top: -19px;
+    }
+
+    @media (min-width: $xsmall + 1) {
+      margin: 12px 30px 30px 37px;
+    }
+
+    @media (max-width: $xsmall) {
+      margin: 12px 0 30px 37px;
+    }
+
+    &-text {
+      line-height: 18px;
+    }
+
+    &-date {
+      color: $accent-color;
+      font-size: 0.83rem;
+      font-style: italic;
+    }
+  }
+}
+
+.copyright {
+  color: #ffffff;
+
+  @media (min-width: $large + 1) {
+    margin: 57px $gutter $gutter $gutter;
+    text-align: right;
+  }
+
+  @media (max-width: $large) and (min-width: $small + 1) {
+    margin: $gutter * 5 $gutter $gutter $gutter;
+    text-align: right;
+  }
+
+  @media (max-width: $small) {
+    margin: $gutter * 2 $gutter $gutter $gutter;
+    text-align: center;
+  }
+}
+
