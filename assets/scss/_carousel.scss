@@ -11,16 +11,15 @@
 }
 
 .carousel-slide {
-  display: flex;
-  position: relative;
-  // position: absolute;
+  display: flex;  
+  position: absolute;
   top: 0;
   border: 7px solid #ffffff;    
   background-image: url(../img/carousel-item-bg.png);
   background-position: 50% 50%;
   background-size: cover;
   transition: opacity 0.5s;
-  opacity: 1;
+  opacity: 0;
 
   @media (max-width: $small) {
     flex-wrap: wrap;
@@ -114,6 +113,7 @@
   position: absolute;
   z-index: 2;
   top: 50%;
+  cursor: pointer;
 
   &.prev {
     left: 3px;

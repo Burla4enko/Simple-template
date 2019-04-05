@@ -553,7 +553,7 @@ i {
       -ms-flex-pack: end;
           justify-content: flex-end;
   position: relative;
-  z-index: 1;
+  z-index: 9;
 }
 
 @media (min-width: 769px) {
@@ -660,6 +660,7 @@ i {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border-radius: 4px;
 }
 
 @media (min-width: 851px) {
@@ -752,7 +753,7 @@ i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
+  position: absolute;
   top: 0;
   border: 7px solid #ffffff;
   background-image: url(../img/carousel-item-bg.png);
@@ -760,7 +761,7 @@ i {
   background-size: cover;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
-  opacity: 1;
+  opacity: 0;
 }
 
 @media (max-width: 768px) {
@@ -895,6 +896,7 @@ i {
   position: absolute;
   z-index: 2;
   top: 50%;
+  cursor: pointer;
 }
 
 .carousel-control.prev {
@@ -1158,6 +1160,18 @@ i {
   display: -ms-flexbox;
   display: flex;
   margin-top: 37px;
+}
+
+@media (max-width: 768px) {
+  .footer .wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.footer .menu__list {
+  top: initial;
+  bottom: 0;
 }
 
 .twitter {

@@ -39,6 +39,15 @@
   .wrapper {
     display: flex;
     margin-top: 37px;
+
+    @media (max-width: $small) {
+      flex-wrap: wrap;
+    }
+  }
+
+  .menu__list {
+    top: initial;
+    bottom: 0;
   }
 }
 
